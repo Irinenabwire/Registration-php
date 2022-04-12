@@ -1,32 +1,45 @@
 <?php
-/* Attempt MySQL server connection. Assuming you are running MySQL
-server with default setting (user 'root' with no password) */
-$link = mysqli_connect("localhost", "root", "", "register_php");
- 
-// Check connection
-if($link === false){
-    die("ERROR: Could not connect. " . mysqli_connect_error());
-}
- 
-// Escape user inputs for security
-$invoice = mysqli_real_escape_string($link, $_REQUEST['invoice']);
-$stock = mysqli_real_escape_string($link, $_REQUEST['stock']);
-$descriptions = mysqli_real_escape_string($link, $_REQUEST['descriptions']);
-$quantity = mysqli_real_escape_string($link, $_REQUEST['quantity']);
-$dates = mysqli_real_escape_string($link, $_REQUEST['dates']);
-$unit = mysqli_real_escape_string($link, $_REQUEST['unit']);
-$customer = mysqli_real_escape_string($link, $_REQUEST['customer']);
-$country_code = mysqli_real_escape_string($link, $_REQUEST['country_code']);
+  
+  // servername => localhost
+  // username => root
+  // password => empty
+  // database name => staff
+  $conn = mysqli_connect("localhost", "root", "", "form_inserction");
+    
+  // Check connection
+  if($conn === false){
+      die("ERROR: Could not connect. " 
+          . mysqli_connect_error());
+  }
+    
+  // Taking all 5 values from the form data(input)
+  $invoice =  $_REQUEST['invoice'];
+  $stock = $_REQUEST['stock'];
+  $desc =  $_REQUEST['desc'];
+  $quantity = $_REQUEST['quantity'];
+  $dates = $_REQUEST['dates'];
+  $unit = $_REQUEST['unit'];
+  $customer = $_REQUEST['customer'];
+  $country_code = $_REQUEST['country_code'];
+  // $id = (isset($_POST['id']) ? $_POST['id'] : '');
+    
+  // Performing insert query execution
+  // here our table name is register
+  $sql = "INSERT INTO register  VALUES ('$invoice','$stock','$desc','$quantity','$dates','$unit','$customer','$country_code')";
+  
+  
+    
+  if(mysqli_query($conn, $sql)){
+      echo "<h3>data stored in a database successfully." 
+          . " Please browse your localhost php my admin" 
+          . " to view the updated data</h3>"; 
 
- 
-// Attempt insert query execution
-$sql = "INSERT INTO persons (invoice,stock, descriptions,quantity,dates,unit,customer,country_code ) VALUES ('$invoice','$description','$stock','$quantity','$dates','$unit','$customer','$country_code')";
-if(mysqli_query($link, $sql)){
-    echo "Records added successfully.";
-} else{
-    echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
-}
- 
-// Close connection
-mysqli_close($link);
-?>
+      
+  } else{
+      echo "ERROR: Hush! Sorry $sql. " 
+          . mysqli_error($conn);
+  }
+    
+  // Close connection
+  mysqli_close($conn);
+  ?>

@@ -18,9 +18,9 @@
                 <input
                   type="text"
                   class="form-control"
-                  id="firstName"
+                  id="invoiceno"
                   name="invoice"
-                  required
+               
                 />
               </div>
               <div class="form-group">
@@ -28,9 +28,9 @@
                 <input
                   type="text"
                   class="form-control"
-                  id="lastName"
+                  id="stockcode"
                   name="stock"
-                  required
+                  
                 />
               </div>
               <div class="form-group">
@@ -38,57 +38,67 @@
                 <input
                   type="text"
                   class="form-control"
-                  id="lastName"
-                  name="descriptions"
-                  required
+                  id="desc"
+                  name="desc"
+                 
                 />
               </div>
               <div class="form-group">
-                <label for="number">Quantity</label>
+                <label for="text">Quantity</label>
                 <input
                   type="text"
                   class="form-control"
-                  id="email"
+                  id="quantity"
                   name="quantity"
-                  required
+                 
                 />
               </div>
+              <!-- <div class="form-group">
+                <label for="text">Quantity</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="quantity"
+                  name="quantity"
+                 
+                />
+              </div> -->
               <div class="form-group">
-                <label for="datetime">InvoiceDate</label>
+                <label for="text">InvoiceDate</label>
                
 
                 <input
-                  value="2017-06-01"
+                  value="2019-07-01"
                   type="date"
                   class="form-control"
-                  id="password"
+                  id="dates"
                   name="dates"
-                  required
+                 
                 />
               </div>
               <div class="form-group">
-                <label for="number">UnitPrice</label>
+                <label for="text">UnitPrice</label>
                 <input
-                  type="number"
+                  type="text"
                   class="form-control"
                   id="number"
                   name="unit"
-                  required
+               
                 />
               </div>
               <div class="form-group">
                 <label for="customer">Customer</label>
                 <input
-                 
+                  type="text"
                   class="form-control"
-                  id="number"
+                  id="customer"
                   name="customer"
-                  required
+                  
                 />
                 <div class="form-group">
-                  <label for="country">Country</label required>
+                  <label for="country">Country</label >
                   <div>
-                    <select name="country_code" class="form_group" required>
+                    <select name="country_code" class="form_group" >
                     <option selected hidden value="">Select country</option>
                     <option value="Africa">Africa</option>
                     <option value="United Kingdom">United Kingdom</option>
@@ -121,63 +131,3 @@
 
 
 
-
-<!-- <!DOCTYPE HTML>
-<html>
-<head>
-  <title>Register Form</title>
-</head>
-<body>
- <form action="insert.php" method="POST">
-  <table>
-   <tr>
-    <td>InvoiceNo :</td>
-    <td><input type="number" name="invoiceno" required></td>
-   </tr>
-   <tr>
-    <td>StockCode:</td>
-    <td><input type="text" name="stock_code" required></td>
-   </tr>
-
-   <tr>
-    <td>Descriptions :</td>
-    <td><input type="text" name="descriptions" required></td>
-   </tr> 
-   <tr>
-    <td>Quantity:</td>
-    <td><input type="text" name="quantity" required></td>
-   </tr>
-   <tr>
-    <td>InvoiceDate:</td>
-    <td><input type="datetime" name="invoice_date" required></td>
-   </tr>
-   <tr>
-    <td>UnitPrice:</td>
-    <td><input type="number" name="unit_price" required></td>
-   </tr>
-   <tr>
-    <td>Customer:</td>
-    <td><input type="text" name="customer" required></td>
-   </tr>
-   <tr>
-    <td>Country:</td>
-    <td>
-     <select name="country_code" required>
-      <option selected hidden value="">Select country</option>
-      <option value="Africa">Africa</option>
-      <option value="United Kingdom">United Kingdom</option>
-      <option value="United States">United state</option>
-      <option value="France">France</option>
-      <option value="Asia">Asia</option>
-      <option value="Britain">Britain</option>
-     </select>
-    
-    </td>
-   </tr>
-   <tr>
-    <td><input type="submit" value="Submit" name="submit"></td>
-   </tr>
-  </table>
- </form>
-</body>
-</html> -->
