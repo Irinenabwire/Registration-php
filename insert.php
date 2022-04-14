@@ -15,7 +15,7 @@
   // Taking all 5 values from the form data(input)
   $invoice =  $_REQUEST['invoice'];
   $stock = $_REQUEST['stock'];
-  $desc =  $_REQUEST['desc'];
+  $descs =  $_REQUEST['descs'];
   $quantity = $_REQUEST['quantity'];
   $dates = $_REQUEST['dates'];
   $unit = $_REQUEST['unit'];
@@ -25,7 +25,7 @@
     
   // Performing insert query execution
   // here our table name is register
-  $sql = "INSERT INTO register  VALUES ('$invoice','$stock','$desc','$quantity','$dates','$unit','$customer','$country_code')";
+  $sql = "INSERT INTO register  (invoice,stock, descs,quantity,dates,unit,customer,country_code ) VALUES ('$invoice','$stock','$descs','$quantity','$dates','$unit','$customer','$country_code')";
   
   
     

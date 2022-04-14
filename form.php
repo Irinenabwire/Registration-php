@@ -38,19 +38,20 @@
                 <input
                   type="text"
                   class="form-control"
-                  id="desc"
-                  name="desc"
+                  id="descs"
+                  name="descs"
                  
                 />
               </div>
               <div class="form-group">
-                <label for="text">Quantity</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="quantity"
-                  name="quantity"
-                 
+              <label for="quantity">Quantity (between 1 and 10):</label>
+              <input
+               type="number" 
+               class="form-control"
+               id="quantity" 
+               name="quantity" 
+               min="1" 
+               max="10"
                 />
               </div>
               <!-- <div class="form-group">
@@ -71,7 +72,7 @@
                   value="2019-07-01"
                   type="date"
                   class="form-control"
-                  id="dates"
+                  id="dates`"
                   name="dates"
                  
                 />
